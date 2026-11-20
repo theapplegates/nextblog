@@ -1,0 +1,183 @@
+:root {
+  --cpb-bg: #ffffff;
+  --cpb-bg-hover: #f4f4f5;
+  --cpb-border: #e4e4e7;
+  --cpb-text: #18181b;
+  --cpb-text-muted: #71717a;
+  --cpb-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 10px -6px rgba(0, 0, 0, 0.08);
+  --cpb-success: #16a34a;
+  --cpb-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+	--cpb-bg: #18181b;
+	--cpb-bg-hover: #27272a;
+	--cpb-border: #3f3f46;
+	--cpb-text: #f4f4f5;
+	--cpb-text-muted: #a1a1aa;
+	--cpb-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.45), 0 4px 10px -6px rgba(0, 0, 0, 0.35);
+	--cpb-success: #4ade80;
+  }
+}
+
+[data-theme="dark"],
+.dark {
+  --cpb-bg: #18181b;
+  --cpb-bg-hover: #27272a;
+  --cpb-border: #3f3f46;
+  --cpb-text: #f4f4f5;
+  --cpb-text-muted: #a1a1aa;
+  --cpb-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.45), 0 4px 10px -6px rgba(0, 0, 0, 0.35);
+  --cpb-success: #4ade80;
+}
+
+.cpb-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13.5px;
+  line-height: 1.4;
+  z-index: 50;
+}
+
+.cpb-auto-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.cpb-split {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--cpb-border);
+  border-radius: var(--cpb-radius);
+  background: var(--cpb-bg);
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.cpb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px;
+  border: none;
+  background: transparent;
+  color: var(--cpb-text);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.cpb-btn:hover {
+  background: var(--cpb-bg-hover);
+}
+
+.cpb-btn--copied {
+  color: var(--cpb-success);
+}
+
+.cpb-toggle {
+  padding: 6px 8px;
+  border-left: 1px solid var(--cpb-border);
+}
+
+.cpb-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.cpb-chevron {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.15s ease;
+}
+
+.cpb-wrapper[data-open="true"] .cpb-chevron {
+  transform: rotate(180deg);
+}
+
+.cpb-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 245px;
+  padding: 5px;
+  border: 1px solid var(--cpb-border);
+  border-radius: 10px;
+  background: var(--cpb-bg);
+  box-shadow: var(--cpb-shadow);
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cpb-wrapper[data-open="true"] .cpb-menu {
+  display: flex;
+}
+
+.cpb-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--cpb-text);
+  text-align: left;
+  text-decoration: none;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+  box-sizing: border-box;
+}
+
+.cpb-item:hover {
+  background: var(--cpb-bg-hover);
+}
+
+.cpb-item-icon {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  color: var(--cpb-text-muted);
+  flex-shrink: 0;
+}
+
+.cpb-item-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.cpb-item-title {
+  font-weight: 500;
+  color: var(--cpb-text);
+}
+
+.cpb-item-subtitle {
+  font-size: 12px;
+  color: var(--cpb-text-muted);
+}
+
+.cpb-external-arrow {
+  width: 13px;
+  height: 13px;
+  margin-top: 3px;
+  color: var(--cpb-text-muted);
+  flex-shrink: 0;
+}
+
+.cpb-divider {
+  height: 1px;
+  margin: 4px 6px;
+  background: var(--cpb-border);
+}
