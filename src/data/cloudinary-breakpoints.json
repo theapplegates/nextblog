@@ -1,0 +1,30 @@
+{
+  "assets/images/cloudinary-workflow-test": {
+    "width": 6000,
+    "height": 3376,
+    "breakpoints": [
+      200,
+      415,
+      557,
+      728,
+      1263,
+      1289,
+      1370,
+      1417,
+      1739,
+      1747,
+      1878,
+      1886,
+      1920
+    ]
+  },
+  "thumbnails/laptop-computer-on-table": [
+    320,
+    480,
+    640,
+    768,
+    1024,
+    1280,
+    1600
+  ]
+}
